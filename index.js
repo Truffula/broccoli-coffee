@@ -18,12 +18,8 @@ function CoffeeScriptFilter (inputTree, options) {
   this.bare = options.bare;
   this.CoffeeLint = CoffeeLint;
 
-  if (options.coffeelintOptions) {
-    this.coffeelintOptions = options.coffeelintOptions;
-    delete this.options.coffeelintOptions;
-  } else if (!this.coffeelintOptions) {
-    this.coffeelintOptions = {};
-  }
+  this.coffeelintOptions = options.coffeelintOptions || {};
+
   this.logger = options.logger || console.log.bind(console);
 
 }
