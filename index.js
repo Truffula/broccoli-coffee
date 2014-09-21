@@ -32,8 +32,6 @@ CoffeeScriptFilter.prototype.extensions = ['coffee','litcoffee','coffee.md'];
 CoffeeScriptFilter.prototype.targetExtension = 'js';
 
 CoffeeScriptFilter.prototype.processString = function (string, srcFile) {
-  console.log('Coffeescript processString');
-  // throw new error;
   var coffeeScriptOptions = {
     bare: this.bare,
     literate: coffeeScript.helpers.isLiterate(srcFile)
